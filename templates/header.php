@@ -8,6 +8,7 @@
 		<meta name='keywords' content='<?=$SELAP['page']['keywords'];?>'>
 		<meta name='description' content='<?=$SELAP['page']['description'];?>'>
 		<meta name="generator" content="SELAP CMS">
+		<link rel="icon" href="/templates/assets/img/favicon.ico">
 		<link rel='stylesheet' href='/templates/assets/css/uikit.min.css'>
 		<link rel='stylesheet' href='/templates/assets/css/style.css'>
 		<script src='/templates/assets/js/uikit.min.js'></script>
