@@ -29,7 +29,7 @@
 	
 	if (!file_exists($page_template)) {
 		header("HTTP/1.0 404 Not Found");
-		$page_template = $_SERVER['DOCUMENT_ROOT'].BASE_URL.TEMPLATE_PATH."/p404.php";
+		$page_template = $_SERVER['DOCUMENT_ROOT'].BASE_URL.TEMPLATE_PATH."/404.php";
 	}
 	require_once($page_template);
 ?>
