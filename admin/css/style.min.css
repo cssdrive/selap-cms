@@ -317,7 +317,7 @@ blockquote:before {
 }
 .a-input, .a-select, .a-textarea {
 	display: inline-block;
-	min-width: 220px;
+	min-width: 100%;
 	max-width: 100%;
 	height: 40px;
 	box-sizing: border-box;
@@ -336,6 +336,16 @@ blockquote:before {
 	-webkit-appearance: none;
 	   -moz-appearance: none;
 	        appearance: none;
+}
+@media (min-width: 960px) {
+	.a-input, .a-select, .a-textarea {
+		min-width: 60%;
+	}
+}
+@media (min-width: 1440px) {
+	.a-input, .a-select, .a-textarea {
+		min-width: 40%;
+	}
 }
 .a-input:hover, .a-select:hover, .a-textarea:hover {
 	border-color: #9ca4b9;
