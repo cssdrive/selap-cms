@@ -9,7 +9,7 @@
 		<meta name='description' content='<?=$SELAP['page']['description'];?>'>
 		<meta name="generator" content="SELAP CMS">
 		<link rel='stylesheet' href='/templates/assets/css/uikit.min.css'>
-		<link rel='stylesheet' href='/templates/style.css'>
+		<link rel='stylesheet' href='/templates/assets/css/style.css'>
 		<script src='/templates/assets/js/uikit.min.js'></script>
 		<script src='/templates/assets/js/uikit-icons.min.js'></script>
 		<!-- Documentation UiKit 3 http://getuikit.com -->
