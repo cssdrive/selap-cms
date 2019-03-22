@@ -16,3 +16,27 @@
 		<!-- Documentation UiKit 3 http://getuikit.com -->
 	</head>
 	<body>
+		
+	<? $side_memu = array();
+		foreach ( $SELAP['menu'] as $menu_item ) {
+			if ( ! empty( $menu_item['parent'] ) ) {
+				$side_memu[] = $menu_item;
+			}
+		}
+		echo '<ul class="uk-navbar-nav uk-visible@m">';
+		foreach ( $SELAP['menu'] as $menu_item ) {	
+			if ( ! empty( $menu_item['parent'] ) ) {
+				continue;
+			}
+			echo '<li><a href="' . $menu_item['link'] . '">' . $menu_item['name'] . '</a>';
+				if ( $side_memu ) {
+					foreach ( $side_memu as $item ) {
+						if ( $menu_item['url'] == $item['parent'] ) {
+						echo '<ul class="uk-nav" uk-dropdown><a href="' . $item['link'] . '">' . $item['name'] . '</a></ul>';
+						}
+					}
+				}
+			echo '</li>';
+		}
+		echo '</ul>';
+	?>
