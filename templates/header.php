@@ -23,19 +23,33 @@
 			$side_memu[] = $menu_item;
 		}
 	}
-	echo '<ul class="uk-navbar-nav uk-visible@m">';
+	echo '<ul class="uk-navbar-nav">';
 	foreach ( $SELAP['menu'] as $menu_item ) {	
 		if ( ! empty( $menu_item['parent'] ) ) {
 			continue;
 		}
 		echo '<li><a href="' . $menu_item['link'] . '">' . $menu_item['name'] . '</a>';
-			if ( $side_memu ) {
-				foreach ( $side_memu as $item ) {
-					if ( $menu_item['url'] == $item['parent'] ) {
-					echo '<ul class="uk-nav" uk-dropdown><a href="' . $item['link'] . '">' . $item['name'] . '</a></ul>';
-					}
+
+				if ( $menu_item['keywords'] != $item['parent'] ) {
+
+					/* NONE */
+
+				} else {
+
+					echo '<div class="uk-navbar-dropdown" uk-dropdown="offset: 0;"><ul class="uk-nav uk-navbar-dropdown-nav">';
+
+						if ( $side_memu ) {
+							foreach ( $side_memu as $item ) {
+								if ( $menu_item['url'] == $item['parent'] ) {
+								echo '<li><a class="uk-link-text" href="' . $item['link'] . '">' . $item['name'] . '</a></li>';
+								}
+							}
+						}
+
+					echo '</ul></div>';
+
 				}
-			}
+
 		echo '</li>';
 	}
 	echo '</ul>';
